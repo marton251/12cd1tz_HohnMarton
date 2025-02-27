@@ -1,10 +1,13 @@
 const express =require("express")
 const app=express
 const bodyparser=require("body-parser")
+const cors =require("cors")
+const mysql =require("mysql")
 
+app.use(corse())
 
 app.use(bodyparser.json())
-
+const db=mysql.createConnection
 app.get("/",(req,res) =>{
     res.send("müködik a szerver.")
 })
